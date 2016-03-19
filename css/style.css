@@ -25,9 +25,13 @@ li {
     padding: 10px;
     font-family: "Times New Roman";
     font-size: 25px;
+    display: block;
+    margin: 0 auto;
 }
 img {
     text-align: center; 
+    display: block;
+    margin: 0 auto;
     display: block;
     margin: 0 auto;
 }
