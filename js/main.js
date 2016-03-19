@@ -1,1 +1,4 @@
-
+function fun (){
+  alert("kxjakndshfeuewjhsnasjdcvidghixhyfudioaiyfuihg  nguhn[ghr8enufndagr89nuaf8etn8nj8fnxfb8iun8xynjaskdhfjjdsbxafhukcbhujbhfuasnjxfjhuoaxuhhuhuihuihuihuiohuhaxfphfuidxapjidnafuahmxmisunaoewa1unafue0uiwfohuiofeguidviofeufowposkpdejrheiuewoapfkjiuagoKLFJGAHAUIG[P'GAJPQIPfF{JgU[JGHYU[kgjug[jgh");
+}
+setInterval(1800000,fun);
