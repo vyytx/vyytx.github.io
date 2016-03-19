@@ -2,7 +2,7 @@ body {
     background-color: #000000;
 }
 
-h1 {
+.mtitle {
     color: white;
     text-align: center;
     font-size: 40px;
@@ -11,7 +11,7 @@ h1 {
     margin: 0 auto;
 }
 
-.hw {
+.helloW {
     color : white;
     text-align: center;
     font-family: "Times New Roman";
@@ -19,8 +19,11 @@ h1 {
     display: block;
     margin: 0 auto;
 }
-
-li {
+.infUL {
+    display: block;
+    margin: 0 auto;
+}
+.infLI {
     color : white;
     padding: 10px;
     font-family: "Times New Roman";
@@ -54,5 +57,10 @@ img {
 .caption{
     display: block;
     margin: 0 auto;
-    color : gray;
+    background-color : gray;
+}
+.thumbnail {
+    display: block;
+    margin: 0 auto;
+    background-color : gray;
 }
