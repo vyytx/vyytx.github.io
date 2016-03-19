@@ -23,6 +23,7 @@ body {
     display: block;
     margin: 0 auto;
     color : white;
+    text-align: center;
 }
 .infLI {
     color : white;
@@ -31,6 +32,7 @@ body {
     font-size: 25px;
     display: block;
     margin: 0 auto;
+    text-align: center;
 }
 img {
     text-align: center; 
