@@ -54,4 +54,5 @@ img {
 .caption{
     display: block;
     margin: 0 auto;
+    color : gray;
 }
