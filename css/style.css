@@ -7,6 +7,8 @@ h1 {
     text-align: center;
     font-size: 40px;
     border: 5px solid #ffffff;
+    display: block;
+    margin: 0 auto;
 }
 
 .hw {
@@ -14,6 +16,8 @@ h1 {
     text-align: center;
     font-family: "Times New Roman";
     font-size: 30px;
+    display: block;
+    margin: 0 auto;
 }
 
 li {
@@ -23,15 +27,21 @@ li {
     font-size: 25px;
 }
 img {
-     text-align: center; 
+    text-align: center; 
+    display: block;
+    margin: 0 auto;
 }
 
 .w{
     color : white;
+    display: block;
+    margin: 0 auto;
 }
 
 .bp1{
     color : gray;
+    display: block;
+    margin: 0 auto;
     background-color : #003399;
     border-radius : 5px;
     border-color : #003399;
