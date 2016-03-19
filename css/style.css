@@ -51,3 +51,7 @@ img {
     border-color : #003399;
    
 }
+.caption{
+    display: block;
+    margin: 0 auto;
+}
