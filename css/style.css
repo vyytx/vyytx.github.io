@@ -7,7 +7,6 @@ body {
     color: white;
     text-align: center;
     font-size: 40px;
-    border: 5px solid #ffffff;
     display: block;
     margin: 0 auto;
 }
@@ -89,4 +88,5 @@ img {
     font-size: 20px;
     color: black;
     border: 5px solid #000;
+    border-radius : 5px;
 }
