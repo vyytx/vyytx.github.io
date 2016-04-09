@@ -11,14 +11,16 @@
       var random1 = 0;
       var i = 0;
       mainCollection = db.collection('main');
-      while (i != 10){
-        random = Math.random();
-        random1 = Math.random();
-        mainCollection.insert({
-          name: random,
-          age: random1
-        });
-        i = i + 1;
+      function _do (times){ 
+        while (i != times){
+          random = Math.random();
+          random1 = Math.random();
+          mainCollection.insert({
+            name: random,
+            age: random1
+          });
+          i = i + 1;
+        }
       }
       </script>
     </body>
