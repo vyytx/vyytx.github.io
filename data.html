@@ -7,7 +7,24 @@
     <script>
       var fdb = new ForerunnerDB();
       var db = fdb.db("the database");
+      var random = 0;
       mainCollection = db.collection('main');
+      function _1 (){
+        random = Math.random();
+        mainCollection.insert({
+          name: random,
+          age: random
+        });
+        function _2();
+      }
+      function _2 (){
+        random = Math.random();
+        mainCollection.insert({
+          name: random,
+          age: random
+        });
+        function _1();
+      }
       </script>
     </body>
   </html>
