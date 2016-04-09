@@ -8,22 +8,17 @@
       var fdb = new ForerunnerDB();
       var db = fdb.db("the database");
       var random = 0;
+      var random1 = 0;
+      var i = 0;
       mainCollection = db.collection('main');
-      function _1 (){
+      while (i != 10){
         random = Math.random();
-        mainCollection.insert({
+        random1 = Math.random();
+        studentCollection.insert({
           name: random,
-          age: random
+          age: random1
         });
-        function _2();
-      }
-      function _2 (){
-        random = Math.random();
-        mainCollection.insert({
-          name: random,
-          age: random
-        });
-        function _1();
+        i = i + 1;
       }
       </script>
     </body>
