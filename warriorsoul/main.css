@@ -1,1 +1,14 @@
-
+.widget .post-body p a.hrefBlock {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+    padding: 10px 15px 10px 55px;
+    background: #387C42 url('http://w.mtwebcenters.com.tw/money168/outside/pan-gu/icon_download.png') 10px center no-repeat;
+    border: 1px solid #A58E4A;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-align: left;
+}
+.body {
+  background-color: black;
+}
