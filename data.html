@@ -38,7 +38,8 @@
           mainCollection.insert({
             name: random + "",
             age: random1,
-            e_mail: random + "@mail.com"
+            e_mail: random + "@mail.com",
+            id: id
           });
           $( ".TInsert" ).append( $( "<tr><td>" + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
           i = i + 1;
@@ -51,7 +52,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "</td><td>" + st[sti]["e-mail"] + "</td><td>" + st[sti].age + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "</td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
