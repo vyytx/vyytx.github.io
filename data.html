@@ -27,6 +27,8 @@
       var random1 = 0;
       var i = 0;
       var id = 1;
+      var st;
+      var sti = 0;
       mainCollection = db.collection('main');
       mainCollection.load();
       function _do (times){ 
@@ -47,7 +49,11 @@
       function __do () {
         mainCollection.load();
         mainCollection.find();
-        
+        st = mainCollection.find();
+        while (mainCollection.find().length != sti){
+          $( ".TInsert" ).append( $( "<tr><td>" + st.sti.id + "</td><td>" + st.sti.name + "</td><td>" + st.sti.e-mail + "</td><td>" + st.sti.age + "</td></tr>" ) );
+          sti = sti + 1;
+        }
       }
       </script>
     </body>
