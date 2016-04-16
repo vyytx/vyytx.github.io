@@ -13,6 +13,7 @@
                <td> name </td>
                <td> mail</td>
                <td> age </td>
+               <td> _id </td>
             </tr>
           </thead>
         <tbody class="TInsert">
@@ -52,7 +53,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "</td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "</td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
