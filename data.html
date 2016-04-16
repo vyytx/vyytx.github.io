@@ -59,7 +59,8 @@
         sti = 0;
       }
       $(".__id").click(function() {
-        alert(mainCollection.find({_id}($( this ).text)));
+        var q={_id};
+        alert(mainCollection.find(q:($( this ).text)));
       });
       </script>
     </body>
