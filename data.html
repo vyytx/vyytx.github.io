@@ -28,6 +28,7 @@
       var i = 0;
       var id = 1;
       mainCollection = db.collection('main');
+      mainCollection.load();
       function _do (times){ 
         while (i != times){
           random = Math.random();
