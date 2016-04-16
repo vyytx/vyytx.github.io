@@ -1,10 +1,25 @@
 <html>
   <head>
     <title>The database</title>
+    <script src="http://orangeappletw.github.io/JavaScript-Advanced-textbook/database_-_part_1/js/fdb-all.min.js"></script>
     </head>
   <body>
-    <script src="http://orangeappletw.github.io/JavaScript-Advanced-textbook/database_-_part_1/js/fdb-all.min.js"></script>
-    <script>
+      <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>姓名</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Orange</td>
+            </tr>
+        </tbody>
+    </table>
+    
+      <script>
       var fdb = new ForerunnerDB();
       var db = fdb.db("the database");
       var random = 0;
