@@ -57,6 +57,10 @@
           sti = sti + 1;
         }
         sti = 0;
+        $(".__id").click(function() {
+          var q = {_id:$( this ).text()};
+          alert(mainCollection.find(q));
+        });
       }
       $(".__id").click(function() {
         var q = {_id:$( this ).text()};
