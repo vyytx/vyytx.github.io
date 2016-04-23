@@ -31,6 +31,7 @@
       var id = 1;
       var st;
       var sti = 0;
+      var stID;
       mainCollection = db.collection('main');
       __do();
       function _do (times){ 
@@ -54,7 +55,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='#edit' onclick='edtext()'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='eeedit' id= 'edit-btn' onclick='edtext()'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
@@ -67,6 +68,17 @@
         var q = {_id:$( this ).text()};
         alert(mainCollection.find(q));
       });
+      
+      $(".edit-btn").click(function(){
+        var stData = mainCollection.find({_id:$(this).data("id")});
+        stData = stData[0];
+        stID = $(this).data("id");
+        $("nameIn").val(stData.name);
+        $("ageIn").val(stData.age);
+        $("mailIn").val(stData.mail);
+        $("#edit").modal('show');
+      })
+      
       </script>
       
        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -79,15 +91,15 @@
       <div class="modal-body">
         <div>
         <h4>將姓名修改為</h4>
-        <input/> 
+        <input id="nameIn" /> 
         </div>
         <div>
         <h4>將年齡修改為</h4>
-        <input/> 
+        <input id="ageIn" /> 
         </div>
         <div>
         <h4>將電子郵件修改為</h4>
-        <input/>
+        <input id="mailIn" />
         </div>
       </div>
       <div class="modal-footer">
