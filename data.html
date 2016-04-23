@@ -53,7 +53,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "</td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
