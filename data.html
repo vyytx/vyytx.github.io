@@ -31,7 +31,6 @@
       var id = 1;
       var st;
       var sti = 0;
-      var editTextName;
       mainCollection = db.collection('main');
       __do();
       function _do (times){ 
@@ -68,11 +67,6 @@
         var q = {_id:$( this ).text()};
         alert(mainCollection.find(q));
       });
-      
-      function edtext (){
-        $("editText") = editTextName.text();
-      }
-      
       </script>
       
        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -85,7 +79,8 @@
       <div class="modal-body">
         
         
-        <h4>將<span id="editText"> editTextName </span>修改為</h4>
+        <h4>將此修改為</h4>
+        <input/> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
