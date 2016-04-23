@@ -55,7 +55,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='#edit'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='#edit' onclick="edtext()">  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
@@ -69,10 +69,9 @@
         alert(mainCollection.find(q));
       });
       
-      $(".js-edit-btn").click(function(){
-        editTextName = $(this).siblings("span").text();
-        
-      });
+      function edtext (){
+        $("editText") = editTextName.text();
+      }
       
       </script>
       
@@ -86,7 +85,7 @@
       <div class="modal-body">
         
         
-        <h4>將</h4> editTextName <h4>修改為</h4><>
+        <h4>將<span id="editText"> editTextName </span>修改為</h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
