@@ -31,6 +31,7 @@
       var id = 1;
       var st;
       var sti = 0;
+      var editTextName;
       mainCollection = db.collection('main');
       __do();
       function _do (times){ 
@@ -54,7 +55,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td>" + st[sti].name + "  " + "<button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#edit'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='#edit'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
@@ -77,7 +78,7 @@
         <h4 class="modal-title" id="myModalLabel">修改資料</h4>
       </div>
       <div class="modal-body">
-        ...
+        <h4>將 修改為</h4><>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
@@ -86,6 +87,10 @@
     </div>
   </div>
 </div>
+      
+        $(".js-edit-btn").click(function(){
+          editTextName = $(this).siblings("span").text();
+        })
       
     </body>
   </html>
