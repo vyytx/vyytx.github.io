@@ -55,7 +55,7 @@
         mainCollection.find();
         st = mainCollection.find();
         while (mainCollection.find().length != sti){
-          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='eeedit' class= 'edit-btn'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary btn-lg js-edit-btn' data-toggle='modal' data-target='eeedit'>  修改 </button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ) );
           sti = sti + 1;
         }
         sti = 0;
@@ -69,7 +69,7 @@
         alert(mainCollection.find(q));
       });
       
-      $(".edit-btn").click(function(){
+      $(".js-edit-btn").click(function(){
         var stData = mainCollection.find({_id:$(this).data("id")});
         stData = stData[0];
         stID = $(this).data("id");
