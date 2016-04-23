@@ -68,6 +68,11 @@
         var q = {_id:$( this ).text()};
         alert(mainCollection.find(q));
       });
+      
+      $(".js-edit-btn").click(function(){
+          editTextName = $(this).siblings("span").text();
+        });
+      
       </script>
       
        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -87,10 +92,5 @@
     </div>
   </div>
 </div>
-      
-        $(".js-edit-btn").click(function(){
-          editTextName = $(this).siblings("span").text();
-        })
-      
     </body>
   </html>
