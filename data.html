@@ -79,7 +79,7 @@
       
       $('body').on('click','.js-delete-btn',function(){
           mainCollection.remove({
-          _id: this.data-id
+          _id: $(this).data("id")
           });
       })
       
