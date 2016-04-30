@@ -38,12 +38,12 @@
         while (i != times){
           random = Math.random();
           random1 = Math.random();
-          //mainCollection.insert({
-           // name: random + "",
-            //age: random1,
-           // e_mail: random + "@mail.com",
-           // id: id
-          //});
+          mainCollection.insert({
+            name: random + "",
+            age: random1,
+            e_mail: random + "@mail.com",
+            id: id
+          });
           $( ".TInsert" ).append( $( "<tr><td>" + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
           i = i + 1;
           id = id + 1;
