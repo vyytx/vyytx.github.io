@@ -67,8 +67,7 @@
       
       
       
-      $('body').on('click',function(){
-        $(".js-edit-btn").click(function(){
+      $('body').on('click','.js-edit-btn',function(){
           var stData = mainCollection.find({_id:$(this).data("id")});
           stData = stData[0];
           stID = $(this).data("id");
@@ -76,7 +75,6 @@
           $("ageIn").val(stData.age);
           $("mailIn").val(stData.mail);
           $("#edit").modal('show');
-        })
       })
       
       </script>
