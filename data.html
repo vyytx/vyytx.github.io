@@ -81,7 +81,8 @@
           mainCollection.remove({
           _id: $(this).data("id")
           });
-          mainCollection.save();
+          setTimeout(mainCollection.save,100);
+          __do();
       })
       
       </script>
