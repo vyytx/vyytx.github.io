@@ -54,7 +54,7 @@
         mainCollection.load(function(){
           st = mainCollection.find();
           while (mainCollection.find().length != sti){
-            $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary js-edit-btn' data-id='edit-btn'>  修改 </button> <button type='button' class='btn btn-primary js-delete-btn' data-id='delete-btn'>刪除</button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ))
+            $( ".TInsert" ).append( $( "<tr><td>" + st[sti].id + "</td><td><span>" + st[sti].name + "  " + "</span><button type='button' class='btn btn-primary js-edit-btn' data-id='edit-btn'>  修改 </button> <button type='button' class='btn btn-primary js-delete-btn' data-id= " + data_id + ">刪除</button> </td><td>" + st[sti]["e_mail"] + "</td><td>" + st[sti].age + "</td><td class='__id'>" + st[sti]._id + "</td></tr>" ))
             sti = sti + 1;
           }
           sti = 0;
