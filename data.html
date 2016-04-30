@@ -65,16 +65,19 @@
         alert(mainCollection.find(q));
       });
       
-      $(".js-edit-btn").click(function(){
-        var stData = mainCollection.find({_id:$(this).data("id")});
-        stData = stData[0];
-        stID = $(this).data("id");
-        $("nameIn").val(stData.name);
-        $("ageIn").val(stData.age);
-        $("mailIn").val(stData.mail);
-        $("#edit").modal('show');
-      })
       
+      
+      $('body').on('click',function(){
+        $(".js-edit-btn").click(function(){
+          var stData = mainCollection.find({_id:$(this).data("id")});
+          stData = stData[0];
+          stID = $(this).data("id");
+          $("nameIn").val(stData.name);
+          $("ageIn").val(stData.age);
+          $("mailIn").val(stData.mail);
+          $("#edit").modal('show');
+        })
+      })
       
       </script>
       
