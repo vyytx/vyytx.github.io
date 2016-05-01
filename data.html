@@ -79,7 +79,7 @@
           $("nameIn").val(stData.name);
           $("ageIn").val(stData.age);
           $("mailIn").val(stData.mail);
-          $("#edit").modal('show');
+          $('#edit').modal('show');
       })
       
       $('body').on('click','.js-delete-btn',function(){
@@ -94,7 +94,9 @@
         CName = $('#nameIn').val();
         CAge = $('#ageIn').val();
         CMail = $('#mailIn').val();
-        DB.mainCollection.updateById($(this).data("id"),'{name:' + CName + ',age:' + CAge + ',mail:' + CMail);
+        DB.Collection("main").updateById($(this).data("id"),'{name:' + CName + ',age:' + CAge + ',mail:' + CMail);
+        mainCollection.save();
+        $('#edit').modal('hide');
       })
       
       </script>
