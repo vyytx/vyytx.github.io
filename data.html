@@ -32,6 +32,11 @@
       var st;
       var sti = 0;
       var stID;
+      
+      var CName;
+      var CAge;
+      var CMail;
+      
       mainCollection = db.collection('main');
       __do();
       function _do (times){ 
@@ -85,6 +90,13 @@
           // setTimeout(mainCollection.save,100);
       })
       
+      $('#edit').on('click' , 'save-btn' , function(){
+        CName = #nameIn.value;
+        CAge = #ageIn.value;
+        Cmail = #mailIn.value;
+        DB.mainCollection.updateById($(this).data("id"),$(this).data("id").name=Cname);
+      })
+      
       </script>
       
        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -110,7 +122,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary">儲存</button>
+        <button type="button" class="btn btn-primary save-btn">儲存</button>
       </div>
     </div>
   </div>
