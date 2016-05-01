@@ -93,8 +93,8 @@
       $('#edit').on('click' , 'save-btn' , function(){
         CName = $('#nameIn').val();
         CAge = $('#ageIn').val();
-        Cmail = $('#mailIn').val();
-        DB.mainCollection.updateById($(this).data("id"),$(this).data("id").name=Cname);
+        CMail = $('#mailIn').val();
+        DB.mainCollection.updateById($(this).data("id"),'{name:' + CName + ',age:' + CAge + ',mail:' + CMail);
       })
       
       </script>
