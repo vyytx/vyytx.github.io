@@ -91,9 +91,9 @@
       })
       
       $('#edit').on('click' , 'save-btn' , function(){
-        CName = #nameIn.value;
-        CAge = #ageIn.value;
-        Cmail = #mailIn.value;
+        CName = $('#nameIn').val();
+        CAge = $('#ageIn').val();
+        Cmail = $('#mailIn').val();
         DB.mainCollection.updateById($(this).data("id"),$(this).data("id").name=Cname);
       })
       
