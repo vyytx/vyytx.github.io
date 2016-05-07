@@ -90,7 +90,7 @@
           $("ageIn").val(stData.age);
           $("mailIn").val(stData.mail);
           $('#edit').modal('show');
-      })
+      });
       
       $('body').on('click','.js-delete-btn',function(){
           mainCollection.remove({
@@ -98,7 +98,7 @@
           });
           mainCollection.save();
           // setTimeout(mainCollection.save,100);
-      })
+      });
       
       $('#edit').on('click' , 'save-btn' , function(){
         CName = $('#nameIn').val();
@@ -107,11 +107,12 @@
         DB.Collection("main").updateById($(this).data("id"),'{name:' + CName + ',age:' + CAge + ',mail:' + CMail);
         mainCollection.save();
         $('#edit').modal('hide');
-      })
+      });
       
       $('#search-btn').on('click' , function(){
+        console.log("======");
         var number = $('#search-i').val();
-        alert(number);
+        console.log(number);
         console.log(mainCollection.find({
           age: {
             $gte: number
