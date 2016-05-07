@@ -76,6 +76,8 @@
       var CAge;
       var CMail;
       
+      var sdata;
+      
       mainCollection = db.collection('main');
       __do();
       function _do (times){ 
@@ -113,6 +115,7 @@
       
       $('body').on('click','.js-edit-btn',function(){
           var stData = mainCollection.find({_id:$(this).data("id")});
+          var sdata = mainCollection.find({_id:$(this).data("id")});
           stData = stData[0];
           stID = $(this).data("id");
           $("nameIn").val(stData.name);
@@ -133,8 +136,7 @@
         CName = $('#nameIn').val();
         CAge = $('#ageIn').val();
         CMail = $('#mailIn').val();
-        mainCollection.updateById($(this).data("id"),{name: CName , age: CAge , mail: CMail});
-        console.log($(this).data("id"));
+        mainCollection.updateById( sdata , {name: CName , age: CAge , mail: CMail});
         mainCollection.save();
         $('#edit').modal('hide');
       });
