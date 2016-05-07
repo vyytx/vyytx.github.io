@@ -122,8 +122,8 @@
         } else if ( ( Maxnumber != "" ) && ( Minnumber != "" ) ) {
           console.log(mainCollection.find({
             age: {
-              $gte: Maxnumber,
-              $lte: Minnumber
+              $gt: Maxnumber,
+              $lt: Minnumber
             }
           }))
         }
