@@ -105,7 +105,7 @@
         CName = $('#nameIn').val();
         CAge = $('#ageIn').val();
         CMail = $('#mailIn').val();
-        DB.Collection("main").updateById($(this).data("id"),{'name:' + CName + ',age:' + CAge + ',mail:' + CMail);
+        DB.Collection("main").updateById($(this).data("id"),{name: CName , age: CAge , mail: CMail);
         mainCollection.save();
         $('#edit').modal('hide');
       });
