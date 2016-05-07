@@ -32,7 +32,35 @@
           
         </tbody>
     </table>
-    
+       <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改資料</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+        <h4>將姓名修改為</h4>
+        <input id="nameIn" /> 
+        </div>
+        <div>
+        <h4>將年齡修改為</h4>
+        <input id="ageIn" /> 
+        </div>
+        <div>
+        <h4>將電子郵件修改為</h4>
+        <input id="mailIn" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary save-btn">儲存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <script>
       var fdb = new ForerunnerDB();
       var db = fdb.db("the database");
@@ -131,34 +159,6 @@
       
       
       </script>
-      
-       <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">修改資料</h4>
-      </div>
-      <div class="modal-body">
-        <div>
-        <h4>將姓名修改為</h4>
-        <input id="nameIn" /> 
-        </div>
-        <div>
-        <h4>將年齡修改為</h4>
-        <input id="ageIn" /> 
-        </div>
-        <div>
-        <h4>將電子郵件修改為</h4>
-        <input id="mailIn" />
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-        <button type="button" class="btn btn-primary save-btn">儲存</button>
-      </div>
-    </div>
-  </div>
-</div>
+
     </body>
   </html>
