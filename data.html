@@ -111,7 +111,7 @@
       
       $('#search-btn').on('click' , function(){
         var number = $('search-i').val();
-        console.log(main.find({
+        console.log(mainCollection.find({
           age: {
             $gte: number
           }
