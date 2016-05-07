@@ -134,6 +134,7 @@
         CAge = $('#ageIn').val();
         CMail = $('#mailIn').val();
         mainCollection.updateById($(this).data("id"),{name: CName , age: CAge , mail: CMail});
+        console.log($(this).data("id"));
         mainCollection.save();
         $('#edit').modal('hide');
       });
