@@ -109,11 +109,11 @@
         $('#edit').modal('hide');
       })
       
-      $('body').on('click' , '#search-btn' , function(){
-        var number = $F
-        result = students.find({
+      $('#search-btn').on('click' , function(){
+        var number = $('search-i').val();
+        console.log(students.find({
           age: {
-            $gte: 60
+            $gte: number
           }
         });
       })
