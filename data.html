@@ -18,7 +18,8 @@
                <div class="row">
   <div class="col-lg-6">
     <div class="input-group">
-      <input type="text" class="form-control" id="search-i" placeholder="Search Age">
+      <input type="text" class="form-control" id="search-Maxi" placeholder="Search Maximum Age">
+      <input type="text" class="form-control" id="search-Mini" placeholder="Search Minimum Age">
       <span class="input-group-btn">
         <button class="btn btn-default" id="search-btn" type="button">Search!</button>
       </span>
@@ -110,15 +111,24 @@
       });
       
       $('#search-btn').on('click' , function(){
-        console.log("======");
-        var number = $('#search-i').val();
-        console.log(number);
-        console.log(mainCollection.find({
-          age: {
-            $gte: number
-          }
-        }))
+        var Maxnumber = $('#search-Maxi').val();
+        var Minnumber = $('#search-Mini').val();
+        if(Maxnumber != "" || Minnumber = ""){
+          console.log(mainCollection.find({
+            age: {
+              $gte: Maxnumber
+            }
+          }))
+        } else if (Maxnumber != "" || Minnumber != "") {
+          console.log(mainCollection.find({
+            age: {
+              $gte: Maxnumber,
+              $lte: Minnumber
+            }
+          }))
+        }
       });
+      
       
       </script>
       
