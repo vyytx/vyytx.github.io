@@ -113,13 +113,13 @@
       $('#search-btn').on('click' , function(){
         var Maxnumber = $('#search-Maxi').val();
         var Minnumber = $('#search-Mini').val();
-        if(Maxnumber != "" || Minnumber = ""){
+        if( ( Maxnumber != "" ) && ( Minnumber == "" ) ){
           console.log(mainCollection.find({
             age: {
               $gte: Maxnumber
             }
           }))
-        } else if (Maxnumber != "" || Minnumber != "") {
+        } else if ( ( Maxnumber != "" ) && ( Minnumber != "" ) ) {
           console.log(mainCollection.find({
             age: {
               $gte: Maxnumber,
