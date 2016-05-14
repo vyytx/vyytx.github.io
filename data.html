@@ -92,13 +92,14 @@
             e_mail: random + "@mail.com",
             id: id
           });
-          $( ".TInsert" ).append( $( "<tr><td> <input type='checkbox' /> " + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td> <input class='cb' type='checkbox' /> " + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
           i = i + 1;
           id = id + 1;
         }
         i = 0;
       }
       function __do () {
+        var i = 1;
         mainCollection.load(function(){
           st = mainCollection.find();
           while (mainCollection.find().length != sti){
@@ -107,6 +108,7 @@
           }
           sti = 0;
         });
+        i = i++;
       }
       $(".__id").click(function() {
         var q = {_id:$( this ).text()};
@@ -146,6 +148,9 @@
       $('#search-btn').on('click' , function(){
         var Maxnumber = $('#search-Maxi').val();
         var Minnumber = $('#search-Mini').val();
+        
+        var isCheck ;
+        
         if( ( Maxnumber != "" ) && ( Minnumber == "" ) ){
           console.log(mainCollection.find({
             age: {
@@ -160,6 +165,12 @@
             }
           }))
         }
+        
+        console.log(collection.find({
+          ID : {
+            $in: []
+          }
+        });
       });
       
       
