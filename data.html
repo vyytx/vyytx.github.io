@@ -14,29 +14,20 @@
                <td> name </td>
                <td> mail</td>
                <td> age </td>
-               <td> _id  
-               <div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" id="search-Maxi" placeholder="Search Maximum Age">
-      <input type="text" class="form-control" id="search-Mini" placeholder="Search Minimum Age">
-      <span class="input-group-btn">
-        <button class="btn btn-default" id="search-btn" type="button">Search!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row --></td>
-<td>
-   <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="radio" aria-label="...">
-      </span>
-      <input type="text" class="form-control" aria-label="...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-  </td>
+               <td> _id </td>
+               <td>
+                 <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="search-Maxi" placeholder="Search Maximum Age">
+                      <input type="text" class="form-control" id="search-Mini" placeholder="Search Minimum Age">
+                      <span class="input-group-btn">
+                      <button class="btn btn-default" id="search-btn" type="button">Search!</button>
+                    </span>
+                  </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+              </div><!-- /.row -->
+            </td>
             </tr>
           </thead>
         <tbody class="TInsert">
@@ -101,7 +92,7 @@
             e_mail: random + "@mail.com",
             id: id
           });
-          $( ".TInsert" ).append( $( "<tr><td>" + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
+          $( ".TInsert" ).append( $( "<tr><td> <input type='checkbox' /> " + id + "</td><td>" + random + "</td><td>" + random + "@mail.com" + "</td><td>" + random1 + "</td></tr>" ) );
           i = i + 1;
           id = id + 1;
         }
