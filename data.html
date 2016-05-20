@@ -147,7 +147,7 @@
           sti = 0;
         });
         i = i++;
-        $("#showAllStudent").hide();
+        $("#showAll-btn").hide();
       }
       
       $(".__id").click(function() {
@@ -208,14 +208,14 @@
       $('#showSelect-btn').on('click' , function(){
         $(".NDtr").hide();
         $(":checked").closest(".NDtr").show();
-        $("#showSelectStudent").hide();
-        $("#showAllStudent").show();
+        $("#showSelect-btn").hide();
+        $("#showAll-btn").show();
       })
       
       $('#showAll-btn').on('click' , function(){
         $(".NDtr").show();
-        $("#showAllStudent").hide();
-        $("#showSelectStudent").show();
+        $("#showAll-btn").hide();
+        $("#showSelect-btn").show();
       })
       
       </script>
