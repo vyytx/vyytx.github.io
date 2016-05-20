@@ -30,6 +30,7 @@
               </td>
               <td>
                 <button class="btn btn-default" id="showSelect-btn" type="button">Show Selecten Student</button>
+                <button class="btn btn-default" id="showAll-btn" type="button">Show All Student</button>
               </td>
             </tr>
           </thead>
@@ -146,6 +147,7 @@
           sti = 0;
         });
         i = i++;
+        $("#showAllStudent").hide();
       }
       
       $(".__id").click(function() {
@@ -206,6 +208,12 @@
       $('#showSelect-btn').on('click' , function(){
         $(".NDtr").hide();
         $(":checked").closest(".NDtr").show();
+        $("#showAllStudent").show();
+      })
+      
+      $('#showAll-btn').on('click' , function(){
+        $(".NDtr").show();
+        $("#showSelectStudent").show();
       })
       
       </script>
