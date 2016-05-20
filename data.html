@@ -22,19 +22,24 @@
                       <input type="text" class="form-control" id="search-Maxi" placeholder="Search Maximum Age">
                       <input type="text" class="form-control" id="search-Mini" placeholder="Search Minimum Age">
                       <span class="input-group-btn">
-                      <button class="btn btn-default" id="search-btn" type="button">Search!</button>
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-              </div><!-- /.row -->
-            </td>
+                        <button class="btn btn-default" id="search-btn" type="button">Search!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+              </td>
+              <td>
+                <button class="btn btn-default" id="showSelect-btn" type="button">Show Selecten Student</button>
+              </td>
             </tr>
           </thead>
         <tbody class="TInsert">
           
         </tbody>
     </table>
-       <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    
+//modal
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -62,6 +67,8 @@
     </div>
   </div>
 </div>
+//*modal
+
 
       <script>
       var fdb = new ForerunnerDB();
@@ -127,6 +134,7 @@
         }
         i = 0;
       }
+      
       function __do () {
         var i = 1;
         mainCollection.load(function(){
@@ -139,12 +147,11 @@
         });
         i = i++;
       }
+      
       $(".__id").click(function() {
         var q = {_id:$( this ).text()};
         alert(mainCollection.find(q));
       });
-      
-      
       
       $('body').on('click','.js-edit-btn',function(){
           var stData = mainCollection.find({_id:$(this).data("id")});
@@ -196,6 +203,10 @@
         }
       });
       
+      $('showSelect-btn').on('click' , function(){
+        $("tr").hide();
+        $(":checked").closest("tr").show();
+      })
       
       </script>
 
