@@ -208,11 +208,13 @@
       $('#showSelect-btn').on('click' , function(){
         $(".NDtr").hide();
         $(":checked").closest(".NDtr").show();
+        $("#showSelectStudent").hide();
         $("#showAllStudent").show();
       })
       
       $('#showAll-btn').on('click' , function(){
         $(".NDtr").show();
+        $("#showAllStudent").hide();
         $("#showSelectStudent").show();
       })
       
