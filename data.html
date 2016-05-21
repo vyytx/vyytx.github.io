@@ -60,6 +60,13 @@
         <h4>將電子郵件修改為</h4>
         <input id="mailIn" />
         </div>
+        <div>
+          <select id="parent-id">
+            <option id="select">請選擇家長</option>
+            <option id="Orange">Orange</option>
+            <option id="Apple">Apple</option>
+          </select>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
@@ -85,6 +92,7 @@
       var CName;
       var CAge;
       var CMail;
+      var CPar;
       
       var sID;
       
@@ -96,25 +104,29 @@
           name: "Kevin",
           age: 93,
           e_mail: "kevin@mail.com",
-          id: 1
+          id: 1,
+          parent: ""
         });
         mainCollection.insert({
           name: "Kevin",
           age: 95,
           e_mail: "kevin@mail.com",
-          id: 2
+          id: 2,
+          parent: ""
         });
         mainCollection.insert({
           name: "Kevin",
           age: 97,
           e_mail: "kevin@mail.com",
-          id: 3
+          id: 3,
+          parent: ""
         });
         mainCollection.insert({
           name: "Kevin",
           age: 99,
           e_mail: "kevin@mail.com",
-          id: 4
+          id: 4,
+          parent: ""
         });
         mainCollection.save();
       }
@@ -178,7 +190,9 @@
         CName = $('#nameIn').val();
         CAge = $('#ageIn').val();
         CMail = $('#mailIn').val();
-        mainCollection.updateById( sID , {name: CName , age: CAge , mail: CMail});
+        CPar = $('parent-id').val();
+        
+        mainCollection.updateById( sID , {name: CName , age: CAge , mail: CMail , parent: CPar});
         mainCollection.save();
         $('#edit').modal('hide');
       });
