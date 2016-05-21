@@ -192,7 +192,7 @@
         CMail = $('#mailIn').val();
         CPar = $('parent-id').val();
         
-        mainCollection.updateById( sID , {name: CName , age: CAge , e-mail: CMail , parent: CPar});
+        mainCollection.updateById( sID , {name: CName , age: CAge , mail: CMail , parent: CPar});
         mainCollection.save();
         $('#edit').modal('hide');
       });
