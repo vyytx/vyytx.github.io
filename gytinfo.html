@@ -56,8 +56,7 @@
 		const escapeRegExp = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 		const getVideo = async (id, decsig) => {
-			const data = await fetch(`https://cors-anywhere.herokuapp.com/https://www.youtube.com/get_video_info?video_id=${id}&el=detailpage`).text();
-
+			const data = await xf.get(`https://cors-anywhere.herokuapp.com/https://www.youtube.com/get_video_info?video_id=${id}&el=detailpage`).text();
 			const obj = parseQuery(data);
 			const playerResponse = JSON.parse(obj.player_response)
 			console.log(`video %s data: %o`, id, obj)
@@ -106,10 +105,10 @@
 		self.onmessage=async e => {
 			const decsig = await xf.get(e.data.path).text(parseDecsig);
 			try {
-			const result = await getVideo(e.data.id, decsig)
-			self.postMessage(result)
+				const result = await getVideo(e.data.id, decsig)
+				self.postMessage(result)
 			} catch (e) {
-			self.postMessage(e)
+				self.postMessage(e)
 			}
 		};`
 		const ytdlWorker = new Worker(
@@ -134,13 +133,12 @@
 
 	  // getVideoInfo("gZL4-f3jRoE");
 	  
-		(async () => { 
-			var vid = "gZL4-f3jRoE";
+		getVideo = (async (vid) => { 
 			var decsig = await xf.get(`https://cors-anywhere.herokuapp.com/https://www.youtube.com/s/player/9f996d3e/player_ias.vflset/zh_TW/base.js`)
 				.text(parseDecsig);
 			var data = await getVideo(vid, decsig);
 			console.log(data);
-		})();
+		});
     </script>
   </body>
 </html>
