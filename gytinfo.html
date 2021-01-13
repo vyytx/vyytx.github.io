@@ -2,7 +2,8 @@
   <head>
   </head>
   <body>
-    <script src="https://unpkg.com/xfetch-js@0.3.4/xfetch.min.js"></script>
+	<script src="https://unpkg.com/xfetch-js@0.3.4/xfetch.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       
       const parseQuery = s => 
@@ -55,12 +56,9 @@
       const escapeRegExp = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
       const getVideo = async (id, decsig) => {
-        const data = await xf
-          .get(
-            `https://www.youtube.com/get_video_info?video_id=${id}&el=detailpage`
-          )
-          .text()
-          .catch(err => null);
+        const data = await fetch(`https://www.youtube.com/get_video_info?video_id=${id}&el=detailpage`, {
+
+		}).text();
 
         const obj = parseQuery(data);
         const playerResponse = JSON.parse(obj.player_response)
